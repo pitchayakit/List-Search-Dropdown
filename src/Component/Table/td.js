@@ -1,10 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class Td extends Component {
-  render() {
-    const { value } = this.props
+const Td = ({ value }) => {
     return <td>{value}</td>
-  }
 }
 
 export default Td
