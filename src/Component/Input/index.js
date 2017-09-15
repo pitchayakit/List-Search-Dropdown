@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 
 class Input extends Component {
-  render() {
-    const { type, name } = this.props
+  shouldComponentUpdate(){ return 0 }
 
-    return (
-        <input type={type} name={name} />
-    )
+  render() {
+    const { type, name, inputChange } = this.props
+
+    return <input type={type} name={name} onChange={inputChange} />
   }
 }
 

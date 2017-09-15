@@ -1,13 +1,24 @@
 import React, { Component } from 'react'
+import Tr from './tr'
 
 class Table extends Component {
   render() {
-    const { type, name } = this.props
+    const { columns, data } = this.props
+    const mapData = data.map((row, index) => (
+      <Tr key={index} columns={row} />
+    ))
 
     return (
-        <input type={type} name={name} />
+      <table>
+        <thead>
+          <Tr columns={columns} />
+        </thead>
+        <tbody>
+          {mapData}
+        </tbody>
+      </table>
     )
   }
 }
 
-export default Input
+export default Table
