@@ -6,7 +6,12 @@ class Input extends Component {
   render() {
     const { type, name, inputChange, inputClick, placeholder } = this.props
 
-    return <input type={type} name={name} onChange={inputChange} placeholder={placeholder} onClick={inputClick} />
+    return (
+      <div>
+        <input type={type} name={name} onChange={inputChange} placeholder={placeholder} onClick={inputClick} />
+        <span class="icon"><i className="fa fa-search"></i></span>
+      </div>
+    )
   }
 }
 

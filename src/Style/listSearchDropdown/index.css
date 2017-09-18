@@ -8,6 +8,11 @@
     border: 1px solid #a1a1a1;
     padding: 10px 10px;
     border-radius: 5px; }
+  .list-search-dropdown .search-input i {
+    position: absolute;
+    right: 38px;
+    margin-top: 10px;
+    color: #1071F6; }
 
 .list-search-dropdown table {
   width: 100%;
