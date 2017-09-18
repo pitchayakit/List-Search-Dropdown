@@ -1,16 +1,26 @@
 .list-search-dropdown {
-    input {
-        width: 100%;
-        padding: 10px;
+    .search-input{
+        padding: 15px 20px;
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 0;
+            box-sizing: border-box;  
+            border: 1px solid #a1a1a1;
+            padding: 10px 10px; 
+            border-radius: 5px;
+        }
     }
 
     table {
         width: 100%;
         border-collapse: collapse;
         thead {
+            background-color: #909090;
+            color: #FFFFFF;
             tr {
                 th {
-                    border: 1px solid black;
+                    border: 1px solid #a1a1a1;
                     padding: 10px;
                 }
             }
@@ -19,8 +29,19 @@
         tbody {
             tr {
                 td {
-                    border: 1px solid black;
+                    border: 1px solid #a1a1a1;
                     padding: 10px;
+                    ul {
+                        list-style-type: none;
+                        li:before {
+                            content: '\f005';
+                            font-family: 'FontAwesome';
+                            float: left;
+                            margin-left: -1.5em;
+                            margin-top: 3px;
+                            color: #F69D00;
+                        }
+                    } 
                 }
             }
         }

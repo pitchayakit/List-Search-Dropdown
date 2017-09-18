@@ -7,11 +7,14 @@ class App extends Component {
   constructor(props) {
     super(props);
     const data = [
-      ["apple","aaab",1,1,1],
-      ["banana","aaabbb",1,1,1],
-      ["grapes","aaabbbccc",1,1,1],
-      ["mango","aaabbbccc",1,1,1],
-      ["orange","aaabbbcccddd",1,1,1]
+      ["พนักงานบริษัทำหน้าที่ภายในสำนักงานไม่ได้ออกติดต่อภายนอก","ธุรกิจเอกชน",1,1,1],
+      ["พนักงานบริษัท ติดต่อภายนอก เช่น พนักงานขาย","ธุรกิจเอกชน",1,1,1],
+      ["เจ้าของบริษัท / นายหน้าจัดหางาน","เจ้าของธุรกิจ",1,1,1],
+      ["เจ้าของบริษัท / นายหน้าจัดหางาน","เจ้าของธุรกิจ",1,1,1],
+      ["เจ้าของบริษัทและผู้จัดการ","โฆษณา",1,1,1],
+      ["กรรมกร","การผลิตแก๊สอะเซทิลิน",1,1,1],
+      ["กรรมกร","อุตสาหกรรมน้ำมัน และก๊าซธรรมชาติ",1,1,1],
+      ["กรรมกร","การผลิตกาว",1,1,1],
     ]
     this.state = {
         searchInputValue : "",
@@ -38,9 +41,10 @@ class App extends Component {
     const { filterData, columns } = this.state
     return (
       <div className="list-search-dropdown">
-        <p>อาชีพประจำ (ชื่ออาชีพ)*</p>
-        <Input type="name" name="searchInput" inputChange={this.inputChange} placeholder="พิมพ์เพื่อค้นหา" />
-        {this.state.searchInputValue}
+        <div className="search-input">
+          <p>อาชีพประจำ (ชื่ออาชีพ)*</p>
+          <Input type="name" name="searchInput" inputChange={this.inputChange} placeholder="พิมพ์เพื่อค้นหา" />
+        </div>
         <Table data={filterData} columns={columns} />
       </div>
     );

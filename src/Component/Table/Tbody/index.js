@@ -3,7 +3,7 @@ import Tr from './tr'
 
 const Tbody = ({ data }) => {
     const mapData = data.map((row, index) => (
-        <Tr key={index} columns={row} />
+        <Tr key={index} row={row} />
     ))
 
     return (
