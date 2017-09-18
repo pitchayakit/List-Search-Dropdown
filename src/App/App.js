@@ -33,7 +33,7 @@ class App extends Component {
 
   filterData = (query,data) => {
     return data.filter((el) =>
-      el[0].toLowerCase().indexOf(query.toLowerCase()) > -1
+      el[0].career.toLowerCase().indexOf(query.toLowerCase()) > -1
     )
   }
 
