@@ -9,6 +9,3 @@ const tr = ({ columns }) => {
 }
 
 export default tr
-
-
-

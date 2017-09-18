@@ -37,10 +37,11 @@ class App extends Component {
   render() {
     const { filterData, columns } = this.state
     return (
-      <div className="App">
-          <Input type="name" name="searchInput" inputChange={this.inputChange} />
-          {this.state.searchInputValue}
-          <Table data={filterData} columns={columns} />
+      <div className="list-search-dropdown">
+        <p>อาชีพประจำ (ชื่ออาชีพ)*</p>
+        <Input type="name" name="searchInput" inputChange={this.inputChange} placeholder="พิมพ์เพื่อค้นหา" />
+        {this.state.searchInputValue}
+        <Table data={filterData} columns={columns} />
       </div>
     );
   }

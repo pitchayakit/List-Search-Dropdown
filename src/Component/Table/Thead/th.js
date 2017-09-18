@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Th = ({ value }) => {
-    return <td>{value}</td>
+    return <th>{value}</th>
 }
 
 export default Th

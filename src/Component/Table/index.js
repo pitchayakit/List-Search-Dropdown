@@ -1,18 +1,13 @@
 import React, { Component } from 'react'
-import Tr from './tr'
+import Thead from './Thead/index'
+import Tbody from './Tbody/index'
 
 const Table = ({ columns, data }) => {
-  const mapData = data.map((row, index) => (
-    <Tr key={index} columns={row} />
-  ))
+
   return (
     <table>
-      <thead>
-        <Tr columns={columns} />
-      </thead>
-      <tbody>
-        {mapData}
-      </tbody>
+      <Thead columns={columns} />
+      <Tbody data={data} />
     </table>
   )
 }

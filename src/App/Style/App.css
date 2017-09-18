@@ -1,0 +1,13 @@
+.list-search-dropdown input {
+  width: 100%;
+  padding: 10px; }
+
+.list-search-dropdown table {
+  width: 100%;
+  border-collapse: collapse; }
+  .list-search-dropdown table thead tr th {
+    border: 1px solid black;
+    padding: 10px; }
+  .list-search-dropdown table tbody tr td {
+    border: 1px solid black;
+    padding: 10px; }
