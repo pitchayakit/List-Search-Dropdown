@@ -35,3 +35,13 @@
         color: #F69D00; }
   .list-search-dropdown table tbody tr td:nth-child(n+3) {
     text-align: center; }
+
+.list-search-dropdown button {
+  background-color: #F69D00;
+  border: none;
+  color: white;
+  padding: 7px 37px;
+  text-align: center;
+  font-size: 16px;
+  margin: 15px 2px;
+  border-radius: 5px; }

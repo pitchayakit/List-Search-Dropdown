@@ -36,6 +36,12 @@ class App extends Component {
     )
   }
 
+  backButton = () => {
+    this.setState({
+      filterData : []
+    })
+  }
+
   render() {
     const { filterData, columns } = this.state
     return (
@@ -45,6 +51,9 @@ class App extends Component {
           <Input type="name" name="searchInput" inputChange={this.inputChange} placeholder="พิมพ์เพื่อค้นหา" />
         </div>
         <Table data={filterData} columns={columns} />
+        <div className="text-center">
+          <button type="button" onClick={this.backButton}>กลับ</button>
+        </div>
       </div>
     );
   }
