@@ -9,7 +9,7 @@ class Input extends Component {
     return (
       <div>
         <input type={type} name={name} onChange={inputChange} placeholder={placeholder} onClick={inputClick} />
-        <span class="icon"><i className="fa fa-search"></i></span>
+        <i className="fa fa-search"></i>
       </div>
     )
   }
