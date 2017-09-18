@@ -4,9 +4,9 @@ class Input extends Component {
   shouldComponentUpdate(){ return 0 }
 
   render() {
-    const { type, name, inputChange, placeholder } = this.props
+    const { type, name, inputChange, inputClick, placeholder } = this.props
 
-    return <input type={type} name={name} onChange={inputChange} placeholder={placeholder} />
+    return <input type={type} name={name} onChange={inputChange} placeholder={placeholder} onClick={inputClick} />
   }
 }
 

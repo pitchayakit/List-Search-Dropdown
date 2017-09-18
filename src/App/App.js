@@ -19,7 +19,8 @@ class App extends Component {
         searchInputValue : "",
         data : data,
         columns : ['อาชีพ','กลุ่มอาชีพ','ขั้นอาชีพ','เบี้ยเพิ่มพิเศษ','ขั้นอาชีพสำหรับ PA'],
-        filterData : data
+        filterData : data,
+        showTablet: false,
     }
   }
 
@@ -38,19 +39,29 @@ class App extends Component {
 
   backButton = () => {
     this.setState({
-      filterData : []
+      showTablet : false
+    })
+  }
+
+  inputClick = () => {
+    this.setState({
+      showTablet : true
     })
   }
 
   render() {
-    const { filterData, columns } = this.state
+    const { filterData, columns, showTablet } = this.state
+    console.log(showTablet)
     return (
       <div className="list-search-dropdown">
         <div className="search-input">
           <p>อาชีพประจำ (ชื่ออาชีพ)*</p>
-          <Input type="name" name="searchInput" inputChange={this.inputChange} placeholder="พิมพ์เพื่อค้นหา" />
+          <Input type="name" name="searchInput" inputChange={this.inputChange} placeholder="พิมพ์เพื่อค้นหา" inputClick={this.inputClick} />
         </div>
-        <Table data={filterData} columns={columns} />
+        {showTablet ?
+          <Table data={filterData} columns={columns} /> : null
+        }
+        
         <div className="text-center">
           <button type="button" onClick={this.backButton}>กลับ</button>
         </div>
