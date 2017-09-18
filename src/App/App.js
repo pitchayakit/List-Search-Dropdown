@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Input from '../Component/Input'
 import Table from '../Component/Table'
+import Button from '../Component/Button'
 
 class App extends Component {
   constructor(props) {
@@ -20,7 +21,7 @@ class App extends Component {
         data : data,
         columns : ['อาชีพ','กลุ่มอาชีพ','ขั้นอาชีพ','เบี้ยเพิ่มพิเศษ','ขั้นอาชีพสำหรับ PA'],
         filterData : data,
-        showTablet: false,
+        showTable: false,
     }
   }
 
@@ -37,33 +38,33 @@ class App extends Component {
     )
   }
 
-  backButton = () => {
+  backButtonClick = () => {
     this.setState({
-      showTablet : false
+      showTable : false
     })
   }
 
   inputClick = () => {
     this.setState({
-      showTablet : true
+      showTable : true
     })
   }
 
   render() {
-    const { filterData, columns, showTablet } = this.state
-    console.log(showTablet)
+    const { filterData, columns, showTable } = this.state
     return (
       <div className="list-search-dropdown">
         <div className="search-input">
           <p>อาชีพประจำ (ชื่ออาชีพ)*</p>
           <Input type="name" name="searchInput" inputChange={this.inputChange} placeholder="พิมพ์เพื่อค้นหา" inputClick={this.inputClick} />
         </div>
-        {showTablet ?
+        {showTable ? 
           <Table data={filterData} columns={columns} /> : null
         }
-        
         <div className="text-center">
-          <button type="button" onClick={this.backButton}>กลับ</button>
+        {showTable ? 
+          <Button backButtonClick={this.backButtonClick} label="กลับ" /> : null
+        }
         </div>
       </div>
     );
