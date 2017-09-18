@@ -32,6 +32,12 @@ class App extends Component {
     })
   }
 
+  inputClick = () => {
+    this.setState({
+      showTable : true
+    })
+  }
+
   filterData = (query,data) => {
     return data.filter((el) =>
       el[0].career.toLowerCase().indexOf(query.toLowerCase()) > -1
@@ -44,14 +50,21 @@ class App extends Component {
     })
   }
 
-  inputClick = () => {
-    this.setState({
-      showTable : true
-    })
+  displayTable () {
+    const { filterData, columns } = this.state
+
+    return (
+      <div>
+        <Table data={filterData} columns={columns} />
+        <div className="text-center">
+          <Button backButtonClick={this.backButtonClick} label="กลับ" />
+        </div>
+      </div>
+    )
   }
 
   render() {
-    const { filterData, columns, showTable } = this.state
+    const { showTable } = this.state
     return (
       <div className="list-search-dropdown">
         <div className="search-input">
@@ -59,13 +72,8 @@ class App extends Component {
           <Input type="name" name="searchInput" inputChange={this.inputChange} placeholder="พิมพ์เพื่อค้นหา" inputClick={this.inputClick} />
         </div>
         {showTable ? 
-          <Table data={filterData} columns={columns} /> : null
+          this.displayTable() : null
         }
-        <div className="text-center">
-        {showTable ? 
-          <Button backButtonClick={this.backButtonClick} label="กลับ" /> : null
-        }
-        </div>
       </div>
     );
   }
