@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Th from './th'
 
 const tr = ({ columns }) => {

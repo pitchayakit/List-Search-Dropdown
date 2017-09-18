@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Tr from './tr'
 
 const Thead = ({ columns }) => {

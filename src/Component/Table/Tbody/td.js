@@ -1,11 +1,12 @@
 import React from 'react'
 
 const Td = ({ value,id }) => {
+    const important = value.important ? 'important' : ''
     if(id === 0) {
         return (
             <td>
                 <ul>
-                    <li>{value}</li>
+                    <li className={important}>{value.career}</li>
                 </ul>
             </td>
         )

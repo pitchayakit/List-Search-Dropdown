@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Td from './td'
 
 const tr = ({ row }) => {
