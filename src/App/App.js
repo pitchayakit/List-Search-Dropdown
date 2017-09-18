@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Input from '../Component/Input'
-import './Style/App.css'
 import Table from '../Component/Table'
 
 class App extends Component {
